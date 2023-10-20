@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Corgnati">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <script src="./src/script/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <section class="dfccc">
+            <h1>BETTING CALCULATOR</h1>
+        </section>
+    </header>
+    <main>
+        <div class="container container__left dfccc">
+
+            <!-- Container 1 -->
+
+
+            <!-- Container 3 -->
+
+            <section class="container__1 dfccc">
+                <section class="container__odd-and-value">
+                    <H2>CALCULADORA DE STAKE</H2>
+
+                    <input class="input__half" placeholder="Digite aqui a odd da aposta desejada" type="text" id="oddValue">
+
+
+                    <div>
+                        <h3>Resultado do Cálculo da Stake:</h3>
+                        <p id="stakeCalculationResult"></p>
+                    </div>
+                    <p><br></p>
+                    <div>
+                        <h3>Saldo Atual</h3>
+                        <input type="text" id="currentBalance" placeholder="Digite aqui o saldo após cada jogo e clique se foi red ou green!">
+                    </div>
+                    <div>
+                        <button class="button__green">Green</button>
+                        <button class="button__red">Red</button>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- Container 2 -->
+
+            <section class="dfccc">
+                <H2>BANKING</H2>
+                <section class="container_last-and-next-game">
+
+                    <div id="slots"></div>
+                    <div>
+                        <p>Última vitória: <span id="lastWin"></span></p>
+
+                        <div>
+                            <p>Próximo Objetivo:</p>
+                            <p id="nextGoal"></p>
+                        </div>
+                        <div>
+                            <p>Meta do Dia:</p>
+                            <p id="goalOfTheDay"></p>
+                        </div>
+                    </div>
+
+                </section>
+                <div>
+                    <h2>Acompanhamento do dia</h2>
+                    <p>Jogos ganhos hoje: <span class="betting__wins">0</span></p>
+                    <p>Número de tentativas: <span class="betting__attempts">0</span></p>
+                </div>
+            </section>
+        </div>
+
+        <div class="container container__right dfccc">
+
+
+            <!-- Container 4 -->
+            <section class="container__4 dfccc">
+                <section class="container_betting-bank-balance">
+                    <div>
+                        <h2>ENTRADA DE DADOS</h2>
+
+                        <h3>Saldo do inicio do dia</h3>
+                        <input class="input__daily-opening-balance" type="text" placeholder="Insira aqui o saldo da sua banca no início do período">
+                    </div>
+
+
+
+
+                    <h3>Meta do mês (%)</h3>
+                    <input placeholder="Meta do mês %" type="text" id="monthlyGoal">
+
+                    <h3>Dias jogando</h3>
+                    <input placeholder="Dias jogando" type="text" id="daysPlaying">
+
+                    <h3>Jogos por dia</h3>
+                    <input placeholder="Jogos por dia" type="text" id="gamesPerDay">
+                    <button class="button_start-the-day" onclick="initializeDay()">Iniciar o Dia</button>
+
+
+                    <p id="calculateResult"></p>
+                    <p><br></p>
+                    <p id="calculateResult2"></p>
+                    <p><br></p>
+
+
+                </section>
+        </div>
+    </main>
+</body>
+
+</html>
